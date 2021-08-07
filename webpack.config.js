@@ -4,13 +4,13 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 module.exports = {
   mode: process.env.NODE_ENV === "production" ? "production" : "development",
   devtool: process.env.NODE_ENV === "production" ? false : "eval-source-map",
-  entry: path.resolve(__dirname, "src", "index.jsx"),
+  entry: path.resolve(__dirname, "src", "index.tsx"),
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "bundle.js",
   },
   resolve: {
-    extensions: [".js", ".jsx"],
+    extensions: [".js", ".jsx", ".ts", ".tsx"],
   },
   plugins: [
     new HtmlWebpackPlugin({
@@ -23,7 +23,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.jsx$/,
+        test: /\.[jt]sx$/,
         exclude: /node_modules/,
         use: {
           loader: "babel-loader",
