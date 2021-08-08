@@ -1,0 +1,30 @@
+@import "../../../styles/variables";
+
+.cart {
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: center;
+  align-items: center;
+  justify-self: flex-end;
+  gap: 1rem;
+  grid-area: cart;
+}
+
+.cartQuantity {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $color-secondary;
+  color: $white;
+  padding: 5px;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  font-weight: 600;
+  padding: 10px;
+  font-size: 1.4rem;
+}
+
+.cartIcon {
+  width: 20px;
+}

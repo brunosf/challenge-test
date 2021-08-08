@@ -1,0 +1,12 @@
+@mixin container($width: $screen-md) {
+  max-width: $width;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+@mixin min-screen($screen-size: $screen-sm) {
+  @media screen and (min-width: $screen-size) {
+    @content;
+  }
+}
