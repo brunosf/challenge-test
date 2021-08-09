@@ -5,6 +5,7 @@ import styles from "./styles.scss";
 
 type ShowcaseProps = {
   title: string;
+  onAddCart: (quantity: number) => void;
 };
 
 var settings = {
@@ -27,6 +28,10 @@ export function Showcase(props: ShowcaseProps) {
       );
   }, []);
 
+  function emitAddCart(quantity: any) {
+    props.onAddCart(quantity);
+  }
+
   return (
     <div className="showcase">
       <div className={styles.showcaseContainer}>
@@ -34,7 +39,11 @@ export function Showcase(props: ShowcaseProps) {
 
         <div className={styles.showcaseList}>
           {products.map((product: any) => (
-            <Product product={product} key={product.productId} />
+            <Product
+              product={product}
+              key={product.productId}
+              onAddCart={emitAddCart}
+            />
           ))}
         </div>
       </div>
