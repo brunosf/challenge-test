@@ -1,0 +1,16 @@
+@import "../../../styles/variables";
+@import "../../../styles/mixins";
+
+.showcaseContainer {
+  @include container();
+}
+
+.showcaseList {
+  display: flex;
+  flex-flow: row nowrap;
+  overflow: auto;
+
+  @include min-screen() {
+    flex-flow: row wrap;
+  }
+}

@@ -1,8 +1,17 @@
+@import "../../../styles/variables";
+@import "../../../styles/mixins";
+
 .menuTrigger {
   background: transparent;
   border: 0;
   cursor: pointer;
   line-height: 0;
+  grid-area: menu;
+  justify-self: flex-start;
+
+  @include min-screen() {
+    display: none;
+  }
 }
 
 .menuIcon {
