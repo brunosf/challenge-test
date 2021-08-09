@@ -1,0 +1,58 @@
+@import "../../../styles/variables";
+@import "../../../styles/mixins";
+
+.newsletter {
+  padding: 25px 0;
+  background-color: #f2f2f2;
+}
+
+.newsletterContainer {
+  text-align: center;
+  @include container();
+}
+
+.newsletterTitle {
+  font-size: 2.2rem;
+  font-weight: 700;
+  text-align: center;
+  color: $black;
+}
+
+.newsletterForm {
+  display: grid;
+  gap: 2rem;
+
+  @include min-screen() {
+    grid-template-columns: repeat(2, 280px) 140px;
+  }
+}
+
+.newsletterLabel {
+  display: grid;
+  text-align: left;
+}
+
+.newsletterError {
+  margin: 10px 0 0;
+  color: $color-secondary;
+}
+
+.newsletterInput {
+  font-weight: 700;
+  color: $black;
+  height: 40px;
+  border: 0;
+  border-radius: 5px;
+  padding: 0 10px;
+}
+
+.newsletterSubmit {
+  font-weight: 700;
+  color: $white;
+  background-color: $black;
+  height: 40px;
+  border: 0;
+  border-radius: 5px;
+  padding: 0 10px;
+  cursor: pointer;
+}
