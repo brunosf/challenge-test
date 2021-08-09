@@ -1,0 +1,20 @@
+@import "../../../styles/variables";
+@import "../../../styles/mixins";
+
+.account {
+  display: none;
+  grid-area: account;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: $color-primary;
+
+  @include min-screen() {
+    display: grid;
+    grid-auto-flow: column;
+    align-items: center;
+  }
+}
+
+.accountIcon {
+  width: 20px;
+}

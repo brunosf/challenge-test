@@ -1,0 +1,23 @@
+@import "../../../styles/variables";
+@import "../../../styles/mixins";
+
+.header {
+  padding: 5px 0;
+}
+
+.headerContainer {
+  display: grid;
+  grid-template-columns: auto minmax(110px, 180px) auto;
+  grid-template-rows: auto auto;
+  grid-template-areas: "menu logo cart" "search search search";
+  grid-gap: 2rem;
+  align-items: center;
+  height: 80px;
+  @include container();
+
+  @include min-screen($screen-sm) {
+    grid-template-columns: minmax(110px, 180px) 1fr auto auto;
+    grid-template-rows: auto;
+    grid-template-areas: "logo search account cart";
+  }
+}
