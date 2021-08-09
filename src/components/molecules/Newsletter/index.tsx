@@ -23,8 +23,6 @@ export function Newsletter() {
       body: JSON.stringify(form),
     })
       .then((response) => {
-        console.log(response);
-
         if (!response.ok) {
           setErrors({
             name: "Preencha com um nome válido",
