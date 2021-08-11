@@ -1,0 +1,18 @@
+@import "../../../styles/variables";
+@import "../../../styles/mixins";
+
+.footer {
+  padding: 25px 0;
+  background-color: $black;
+}
+
+.footerContainer {
+  display: grid;
+  gap: 10px;
+  @include container();
+
+  @include min-screen() {
+    grid-template-columns: 1fr 250px 1fr;
+    align-items: center;
+  }
+}

@@ -1,0 +1,19 @@
+@import "../../../styles/variables";
+@import "../../../styles/mixins";
+
+.logoList {
+  display: grid;
+  grid-auto-flow: column;
+  gap: 3rem;
+  align-items: center;
+  justify-content: center;
+
+  @include min-screen() {
+    justify-content: flex-end;
+  }
+}
+
+.logoItem {
+  font-size: 1.4rem;
+  color: $white;
+}

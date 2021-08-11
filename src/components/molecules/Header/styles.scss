@@ -12,10 +12,10 @@
   grid-template-areas: "menu logo cart" "search search search";
   grid-gap: 2rem;
   align-items: center;
-  height: 80px;
   @include container();
 
   @include min-screen($screen-sm) {
+    height: 80px;
     grid-template-columns: minmax(110px, 180px) 1fr auto auto;
     grid-template-rows: auto;
     grid-template-areas: "logo search account cart";

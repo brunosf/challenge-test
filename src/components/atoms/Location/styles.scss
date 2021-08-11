@@ -1,0 +1,24 @@
+@import "../../../styles/variables";
+@import "../../../styles/mixins.scss";
+
+.locationTitle {
+  display: inline-block;
+  font-size: 2rem;
+  font-weight: 700;
+  color: $white;
+
+  &:after {
+    content: "";
+    display: block;
+    margin-top: 10px;
+    width: 50%;
+    height: 5px;
+    border-radius: 10px;
+    background-color: $white;
+  }
+}
+
+.locationContent {
+  font-size: 1.4rem;
+  color: $white;
+}

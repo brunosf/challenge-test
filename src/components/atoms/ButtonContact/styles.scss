@@ -1,0 +1,21 @@
+@import "../../../styles/variables";
+@import "../../../styles/mixins.scss";
+
+.buttonContact {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 10px;
+  color: $black;
+  background-color: white;
+  border-radius: 5px;
+
+  &:not(:last-child) {
+    margin-bottom: 10px;
+  }
+}
+
+.buttonText {
+  margin-left: 10px;
+}
