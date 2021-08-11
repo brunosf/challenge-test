@@ -4,14 +4,11 @@
 .product {
   position: relative;
   display: grid;
+  grid-template-rows: 200px auto;
   cursor: pointer;
-  width: 250px;
-  margin: 0 20px;
-
-  @include min-screen() {
-    width: 25%;
-    margin: 0;
-  }
+  width: 280px;
+  text-align: center;
+  white-space: normal;
 
   &:hover {
     .productButtonBuy {
@@ -68,6 +65,7 @@
 .productName {
   margin: 0;
   text-align: center;
+  font-size: 1.6rem;
 }
 
 .productPriceOld {
