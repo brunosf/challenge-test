@@ -17,7 +17,6 @@ export interface ProductProps {
     price: number;
     installments: Array<Installments>;
   };
-  onAddCart: (quantity: number) => void;
 }
 
 export function Product(props: ProductProps) {
