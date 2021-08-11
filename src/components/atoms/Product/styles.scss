@@ -2,6 +2,7 @@
 @import "../../../styles/mixins";
 
 .product {
+  position: relative;
   display: grid;
   cursor: pointer;
   width: 250px;
@@ -20,6 +21,31 @@
     .productInfo {
       background-color: #e6e8ea;
     }
+  }
+}
+
+.productTag {
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  &:after {
+    content: "";
+    border-right: 80px solid $color-secondary;
+    border-bottom: 80px solid transparent;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  span {
+    position: absolute;
+    top: 12px;
+    right: 7px;
+    z-index: 10;
+    color: $white;
+    font-weight: 700;
+    font-size: 2rem;
   }
 }
 

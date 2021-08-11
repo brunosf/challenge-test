@@ -1,3 +1,5 @@
+import { useContext } from "react";
+import { CartContext } from "../../CartContext";
 import styles from "./styles.scss";
 
 export interface Installments {
@@ -19,12 +21,7 @@ export interface ProductProps {
 }
 
 export function Product(props: ProductProps) {
-  function buy() {
-    const quantity = Number(localStorage.getItem("cart-quantity")) || 0;
-    localStorage.setItem("cart-quantity", String(quantity + 1));
-
-    props.onAddCart(quantity);
-  }
+  const { addCart } = useContext(CartContext);
 
   function priceFormat(price: number) {
     const priceStr = price.toString();
@@ -40,6 +37,11 @@ export function Product(props: ProductProps) {
 
   return (
     <div className={styles.product}>
+      {props.product.listPrice && (
+        <div className={styles.productTag}>
+          <span>OFF</span>
+        </div>
+      )}
       <img
         src={props.product.imageUrl}
         alt={props.product.productName}
@@ -65,7 +67,7 @@ export function Product(props: ProductProps) {
             ))}
           </p>
         </div>
-        <button className={styles.productButtonBuy} onClick={buy}>
+        <button className={styles.productButtonBuy} onClick={addCart}>
           Comprar
         </button>
       </div>
