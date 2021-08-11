@@ -1,17 +1,10 @@
-import { useEffect, useState } from "react";
+import { useContext } from "react";
 import cartIcon from "../../../assets/img/cart-icon.svg";
+import { CartContext } from "../../CartContext";
 import styles from "./styles.scss";
 
 export function Cart() {
-  const [quantity, setQuantity] = useState(0);
-
-  function mounted() {
-    setQuantity(Number(localStorage.getItem("cart-quantity") || 0));
-  }
-
-  useEffect(() => {
-    mounted();
-  }, []);
+  const { quantity } = useContext(CartContext);
 
   return (
     <div className={styles.cart}>
