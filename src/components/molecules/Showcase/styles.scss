@@ -28,11 +28,9 @@
 }
 
 .showcaseList {
-  display: flex;
-  flex-flow: row nowrap;
+  display: grid;
+  grid-auto-flow: column;
   overflow: auto;
-
-  @include min-screen() {
-    flex-flow: row wrap;
-  }
+  white-space: nowrap;
+  gap: 10px;
 }

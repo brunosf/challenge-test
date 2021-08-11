@@ -12,3 +12,7 @@ body {
   text-rendering: optimizeLegibility;
   color: $color-primary;
 }
+
+img {
+  max-width: 100%;
+}
